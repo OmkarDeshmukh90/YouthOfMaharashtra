@@ -1,0 +1,31 @@
+const Nav = () => {
+  return (
+    <div className="w-full bg-neutral-200 h-[111px] flex">
+      <img src="logo.svg" alt="Logo" className="w-[130px] h-[130px] m-5" />
+      <div className="flex w-full">
+        <ul className="w-full flex justify-evenly p-1 items-center text-xl font-bold">
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/Login">Join Us</a>
+          </li>
+          <li>
+            <a href="/FootPrints">FootPrints</a>
+          </li>
+          <li>
+            <a href="/Resources">Resorces</a>
+          </li>
+          <li>
+            <a href="/Events">Events</a>
+          </li>
+          <li>
+                    <a href="/ContactUs">Contact Us</a>
+                </li>
+        </ul>
+      </div>
+    </div>
+  );
+};
+
+export default Nav;
