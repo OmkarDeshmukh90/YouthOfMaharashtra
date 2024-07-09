@@ -7,10 +7,10 @@ import OrgLogin from "./Routes/OrgLogin";
 const App = () => {
   return (
     <>
-    <div className="z-0">
+    
       <Routes>
         <Route path="/" Component={Home} />
-        <Route path="/Login" Component={JoinUs}/ >
+        <Route path="/Login" Component={JoinUs} />
             
         
         <Route path="/FootPrints" />
@@ -20,7 +20,7 @@ const App = () => {
         <Route path="/MemberLogin" Component={MemberLogin}/>
         <Route path="/OrgLogin" Component={OrgLogin}/>
       </Routes>
-      </div>
+      
     </>
   );
 };
