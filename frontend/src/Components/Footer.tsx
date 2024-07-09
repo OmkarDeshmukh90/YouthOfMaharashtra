@@ -1,35 +1,105 @@
-import { AiFillYoutube } from "react-icons/ai"
-import { FaFacebook, FaInstagramSquare, FaLinkedin, } from "react-icons/fa"
-import { FaSquareXTwitter } from "react-icons/fa6"
-import { IoIosMail } from "react-icons/io"
-import { PiLineVerticalBold } from "react-icons/pi"
-const Footer = () => {
-  return (
-    <div className="w-full  bg-[#3B3A63] h-[250px] flex items-center flex-col">
-      <div className="flex w-full  h-4/6  m-2 pl-3 justify-center">
-      <img src="/images/Footer.svg" alt="Footer Image"  className="h-full "/>
-      <div className="flex items-center justify-center w-full h-full max-w-[700px] ">
-        <div className="flex justify-evenly items-center w-full p-10 m-6 pl-0 ml-2">
-        <FaFacebook className="object-contain w-[45px] h-[45px] rounded-full"/>
-        <FaSquareXTwitter className="object-contain w-[45px] h-[45px] rounded-full"/>
-        <AiFillYoutube className="object-contain w-[45px] h-[45px] rounded-full"/>
-        <FaLinkedin className="object-contain w-[45px] h-[45px] rounded-full"/>
-        <FaInstagramSquare className="object-contain w-[45px] h-[45px] rounded-full"/>
-        <IoIosMail className="object-contain w-[45px] h-[45px] rounded-full"/>
-        </div>
-      </div>
-      </div>
-      <div className="text-white flex justify-center w-full text-2xl/4">
-        <h3>YoM©2024</h3>
-        <PiLineVerticalBold className="text-white  h-full" />
-        <h3>Privacy Policy</h3>
-        <PiLineVerticalBold className="text-white  h-full" />
-        <h3> Terms of Use </h3>
-        <PiLineVerticalBold className="text-white  h-full" />
-        <h3>Contact Us</h3>
-      </div>
-    </div>
-  )
-}
+import React from 'react';
+import styled from 'styled-components';
+import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube, FaLinkedinIn, FaEnvelope } from 'react-icons/fa';
 
-export default Footer
+const FooterContainer = styled.footer`
+  background-color: #3b3a63;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+`;
+
+const FooterContent = styled.div`
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+const SocialMediaIcons = styled.div`
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 20px;
+`;
+
+const IconLink = styled.a`
+  color: #fff;
+  text-decoration: none;
+  font-size: 2rem;
+  margin: 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  transition: transform 0.3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+`;
+
+const FooterLinks = styled.div`
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+`;
+
+const FooterLink = styled.a`
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0 20px;
+`;
+
+const Separator = styled.span`
+  color: #fff;
+  font-weight: bold;
+  padding: 0 10px;
+`;
+
+const FooterComponent: React.FC = () => {
+  const currentYear = new Date().getFullYear();
+
+  return (
+    <FooterContainer>
+      <FooterContent>
+        <SocialMediaIcons>
+          <IconLink href="#" target="_blank" rel="noopener noreferrer">
+            <FaFacebookF />
+          </IconLink>
+          <IconLink href="#" target="_blank" rel="noopener noreferrer">
+            <FaTwitter />
+          </IconLink>
+          <IconLink href="#" target="_blank" rel="noopener noreferrer">
+            <FaInstagram />
+          </IconLink>
+          <IconLink href="#" target="_blank" rel="noopener noreferrer">
+            <FaYoutube />
+          </IconLink>
+          <IconLink href="#" target="_blank" rel="noopener noreferrer">
+            <FaLinkedinIn />
+          </IconLink>
+          <IconLink href="#" target="_blank" rel="noopener noreferrer">
+            <FaEnvelope />
+          </IconLink>
+        </SocialMediaIcons>
+        <FooterLinks>
+          <FooterLink href="#">Privacy Policy</FooterLink>
+          <Separator>|</Separator>
+          <FooterLink href="#">Terms of Use</FooterLink>
+          <Separator>|</Separator>
+          <FooterLink href="#">Contact Us</FooterLink>
+        </FooterLinks>
+        <p>&copy; {currentYear} Youth of Maharashtra. All rights reserved.</p>
+      </FooterContent>
+    </FooterContainer>
+  );
+};
+
+export default FooterComponent;
