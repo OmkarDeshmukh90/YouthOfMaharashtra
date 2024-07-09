@@ -5,7 +5,7 @@ import { IoIosMail } from "react-icons/io"
 import { PiLineVerticalBold } from "react-icons/pi"
 const Footer = () => {
   return (
-    <div className="w-full bg-[#3B3A63] h-[250px] flex items-center flex-col">
+    <div className="w-full  bg-[#3B3A63] h-[250px] flex items-center flex-col">
       <div className="flex w-full  h-4/6  m-2 pl-3 justify-center">
       <img src="/images/Footer.svg" alt="Footer Image"  className="h-full "/>
       <div className="flex items-center justify-center w-full h-full max-w-[700px] ">

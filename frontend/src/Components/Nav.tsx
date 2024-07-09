@@ -1,8 +1,8 @@
 const Nav = () => {
   return (
-    <div className="w-full bg-neutral-200 h-[111px] flex">
-      <img src="logo.svg" alt="Logo" className="w-[130px] h-[130px] m-5" />
-      <div className="flex w-full">
+    <div className="w-full bg-neutral-200 h-[111px] flex z-10 ">
+      <img src="logo.svg" alt="Logo" className="w-[130px] h-[130px] m-5 absolute" />
+      <div className="flex w-full ml-[130px]">
         <ul className="w-full flex justify-evenly p-1 items-center text-xl font-bold">
           <li>
             <a href="/">Home</a>
